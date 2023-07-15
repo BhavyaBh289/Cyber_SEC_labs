@@ -29,7 +29,13 @@ public class S_des_encrypt{
         // for (int i=0;i<len;i++){
         //     System.out.print(input[i]);
         // }
+        sc.close();
     }
+    public static int[] kx (int[]key,int[]data){
+        int [] ne = new int [5];
+        return ne;
+    }
+
     public static int[][] keygen (int[] key){
         int [] data = permutate(p10,key );
         int [][] finalkeys = new int[2][];
@@ -64,5 +70,17 @@ public class S_des_encrypt{
         for (int i=0;i<len;i++){
             inp[i]= ne[i];
         }
+    }
+
+    public static int[] xor (int []arr1 , int[] arr2){
+        int [] result = new int[arr1.length];
+        for (int i = 0; i < arr1.length; i++) {
+            result[i]= (arr1[i]+arr2[i])%2;
+        }
+        return result;
+    }
+
+    public static int[] substitute(int[][]matrix,int[]value){
+        
     }
 }

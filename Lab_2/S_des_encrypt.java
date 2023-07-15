@@ -13,21 +13,29 @@ public class S_des_encrypt{
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.print("Enter key ");
+
         String[] splitArray = sc.nextLine().split(" ");
         int[] key = new int[splitArray.length];
         for (int i = 0; i < splitArray.length; i++) {
             key[i] = Integer.parseInt(splitArray[i]);
         }
         // System.out.print(Arrays.deepToString(keys));     
+        System.out.print("Enter passphrase ");
+
         String[] splitArrayy = sc.nextLine().split(" ");
         int[] plaintext = new int[splitArrayy.length];
         for (int i = 0; i < splitArrayy.length; i++) {
             plaintext[i] = Integer.parseInt(splitArrayy[i]);
         }
+        // int[]key = new int[]{0,0,1,0,0,1,0,1,1,1};
+        // int[]plaintext = new int []{1,0,1,0,0,1,0,1};
         int [] cyphertext = kx(key, plaintext);
+        System.out.print("Cyphertext is : ");
+
         for (int i :cyphertext){
             System.out.print(i);
-        }
+        }System.out.println();
         sc.close();
     }
     public static int[] kx (int[]key,int[]data){
@@ -36,7 +44,7 @@ public class S_des_encrypt{
         data1 = rx(keys[0],data1);
         ls(4,data1);
         data1 = rx(keys[1],data1);
-        data1 = permutate(ip, data);
+        data1 = permutate(ip1, data1);
         return data1;
     }
     public static int[] rx (int[]key,int[]data){
@@ -50,9 +58,11 @@ public class S_des_encrypt{
         int [] n4 =Arrays.copyOfRange(w1 ,4,data.length);
         System.arraycopy(substitute(s0, n3), 0,n2,0 ,2);
         System.arraycopy(substitute(s1, n4), 0,n2,2 ,2);
+        
         n2 = permutate(p4,n2);
         n2 = xor(n1, n2);
         System.arraycopy(n2, 0,sol,0 ,4);
+        
         return sol;
     }
     
@@ -98,16 +108,21 @@ public class S_des_encrypt{
         }
         return result;
     }
-    public static int toint(int t, int q){
+    public static int toint(int q, int t){
         int n = t;
-        return n+=q*2;
+        n+=q*2;
+        return n ;
     }
     public static int []toarr(int t){
+ 
         int[] n = new int []{ t/2,t%2};
         return n;
     }
     public static int[] substitute(int[][]matrix,int[]value){
+ 
         int [] arr = toarr(matrix[toint(value[0], value[3])][toint(value[1], value[2])]) ;
+
+ 
         return arr;
     }
 

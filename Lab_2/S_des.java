@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class S_des_encrypt{
+public class S_des{
     static int[] p10 = new int[]{ 3,5,2,7,4,10,1,9,8,6 };
     static int[] p8 = new int[]{6,3,7,4,8,5,10,9}; 
     static int[] ip = new int []{2,6,3,1,4,8,5,7};
@@ -30,15 +30,31 @@ public class S_des_encrypt{
         }
         // int[]key = new int[]{0,0,1,0,0,1,0,1,1,1};
         // int[]plaintext = new int []{1,0,1,0,0,1,0,1};
-        int [] cyphertext = kx(key, plaintext);
+        int [] cyphertext = encrypt(key, plaintext);
         System.out.print("Cyphertext is : ");
 
         for (int i :cyphertext){
             System.out.print(i);
         }System.out.println();
         sc.close();
+        int [] decoded = decrypt(key, cyphertext);
+        System.out.print("plaintext is : ");
+
+        for (int i :decoded){
+            System.out.print(i);
+        }System.out.println();
+        sc.close();
     }
-    public static int[] kx (int[]key,int[]data){
+    public static int[] decrypt (int[]key,int[]data){
+        int[][] keys = keygen(key);
+        int [] data1 = permutate(ip, data);
+        data1 = rx(keys[1],data1);
+        ls(4,data1);
+        data1 = rx(keys[0],data1);
+        data1 = permutate(ip1, data1);
+        return data1;
+    }
+    public static int[] encrypt (int[]key,int[]data){
         int[][] keys = keygen(key);
         int [] data1 = permutate(ip, data);
         data1 = rx(keys[0],data1);

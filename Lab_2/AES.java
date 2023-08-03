@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class AES {
     private static final int[] sBox = {0x9, 0x4, 0xA, 0xB, 0xD, 0x1, 0x8, 0x5, 0x6, 0x2, 0x0, 0x3, 0xC, 0xE, 0xF, 0x7};
     private static final int[] sBoxI = {0xA, 0x5, 0x9, 0xB, 0x1, 0x7, 0x8, 0xF, 0x6, 0x0, 0x2, 0x3, 0xC, 0x4, 0xD, 0xE};
@@ -104,10 +106,14 @@ public class AES {
         };
     }
 
-    public static void ToBinary(int num) {
-        if(num>=1) {
-            ToBinary(num / 2);
-            System.out.print(num % 2);
+    public static void printn(int num,int n){
+        int []res= new int[n];
+        for(int i = n-1;i>=0;i--){
+            res[i]=num%2;
+            num/=2;
+        }
+        for (int i :res){
+            System.out.print(i);
         }
     }
     public int encrypt(int plaintext) {
@@ -128,16 +134,37 @@ public class AES {
         return stateToInt(state);
     }
     public static void main(String [] args){
-    int key = 0b0100101011110101;
-    int plaintext= 0b1101011100101000;
-    AES test = new AES();
-    test.keygen(key);
-    int ciphertext = test.encrypt(plaintext);
-    ToBinary(ciphertext);
-//        ToBinary(19);
-    System.out.println();
-    plaintext=test.decrypt(ciphertext);
-    ToBinary(plaintext);
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter key ");
+
+        String[] splitArray = sc.nextLine().split("");
+        int key=0;
+        for (int i = 0; i < splitArray.length; i++) {
+            key*=2;
+            key += Integer.parseInt(splitArray[i]);
+        }
+        AES test = new AES();
+        test.keygen(key);
+        System.out.print("Enter text ");
+        String[] splitArrayy = sc.nextLine().split("");
+        int text = 0;
+        for (int i = 0; i < splitArrayy.length; i++) {
+            text*=2;
+            text += Integer.parseInt(splitArrayy[i]);
+        }
+        System.out.print("enter 1 to encrypt and 2 to decrypt");
+        int switc = sc.nextInt();
+        switch (switc){
+            case 1:
+                int ciphertext = test.encrypt(text);
+                printn(ciphertext,16);
+                break;
+            case 2:
+                int plaintextt = test.decrypt(text);
+                printn(plaintextt,16);
+                break;
+
+        }
     }
 }
 

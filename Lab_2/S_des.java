@@ -15,7 +15,7 @@ public class S_des{
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter key ");
 
-        String[] splitArray = sc.nextLine().split(" ");
+        String[] splitArray = sc.nextLine().split("");
         int[] key = new int[splitArray.length];
         for (int i = 0; i < splitArray.length; i++) {
             key[i] = Integer.parseInt(splitArray[i]);
@@ -23,7 +23,7 @@ public class S_des{
         // System.out.print(Arrays.deepToString(keys));     
         System.out.print("Enter passphrase ");
 
-        String[] splitArrayy = sc.nextLine().split(" ");
+        String[] splitArrayy = sc.nextLine().split("");
         int[] plaintext = new int[splitArrayy.length];
         for (int i = 0; i < splitArrayy.length; i++) {
             plaintext[i] = Integer.parseInt(splitArrayy[i]);

@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8567ab73-a4ed-4c08-8428-62147c8ff1e7" name="Changes" comment="AES Working">
+    <list default="true" id="8567ab73-a4ed-4c08-8428-62147c8ff1e7" name="Changes" comment="Simplified Advanced encryption system">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_2/AES.class" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_2/AES.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_2/AES.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_2/AES.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lab/AES.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab/AES.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +36,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/home/bh289/Documents/clg/sem_5/computer networking/Labs_CN",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -74,11 +73,20 @@
       <option name="project" value="LOCAL" />
       <updated>1691045087600</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Simplified Advanced encryption system">
+      <option name="closed" value="true" />
+      <created>1691049094881</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1691049094881</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="AES Working" />
-    <option name="LAST_COMMIT_MESSAGE" value="AES Working" />
+    <MESSAGE value="Simplified Advanced encryption system" />
+    <option name="LAST_COMMIT_MESSAGE" value="Simplified Advanced encryption system" />
   </component>
 </project>

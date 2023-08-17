@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8567ab73-a4ed-4c08-8428-62147c8ff1e7" name="Changes" comment="Simplified Advanced encryption system">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab/AES.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab/AES.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lab.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +37,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "/home/bh289/Documents/clg/sem_5/computer networking/Labs_CN",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }

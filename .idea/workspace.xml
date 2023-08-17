@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8567ab73-a4ed-4c08-8428-62147c8ff1e7" name="Changes" comment="Simplified Advanced encryption system">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab_2/AES.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab_4/rsa.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_4/rsa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Lab_4/rsa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab_4/rsa.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +49,7 @@
       <recent name="$PROJECT_DIR$/Lab_3" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.rsa">
     <configuration name="S_Aes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="S_Aes" />
       <module name="lab" />
@@ -54,6 +57,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="rsa" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lab_4.rsa" />
+      <module name="lab" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lab_4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.rsa" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -87,5 +108,15 @@
     <MESSAGE value="AES Working" />
     <MESSAGE value="Simplified Advanced encryption system" />
     <option name="LAST_COMMIT_MESSAGE" value="Simplified Advanced encryption system" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArithmeticException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

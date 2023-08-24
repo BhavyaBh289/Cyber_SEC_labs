@@ -1,6 +1,6 @@
 import java.util.Arrays;
 import java.util.Scanner;
-
+//Bh289
 public class S_des{
     static int[] p10 = new int[]{ 3,5,2,7,4,10,1,9,8,6 };
     static int[] p8 = new int[]{6,3,7,4,8,5,10,9}; 
@@ -13,7 +13,7 @@ public class S_des{
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter key ");
+        System.out.print("For encryption Enter key ");
 
         String[] splitArray = sc.nextLine().split("");
         int[] key = new int[splitArray.length];
@@ -32,12 +32,27 @@ public class S_des{
         // int[]plaintext = new int []{1,0,1,0,0,1,0,1};
         int [] cyphertext = encrypt(key, plaintext);
         System.out.print("Cyphertext is : ");
-
         for (int i :cyphertext){
             System.out.print(i);
         }System.out.println();
-        sc.close();
-        int [] decoded = decrypt(key, cyphertext);
+
+        System.out.println("For decryption  Enter key ");
+
+        String[] ssplitArray = sc.nextLine().split("");
+        int[] kkey = new int[ssplitArray.length];
+        for (int i = 0; i < ssplitArray.length; i++) {
+            kkey[i] = Integer.parseInt(ssplitArray[i]);
+        }
+        // System.out.print(Arrays.deepToString(keys));
+        System.out.print("Enter passphrase ");
+
+        String[] ssplitArrayy = sc.nextLine().split("");
+        int[] cyphertextt = new int[splitArrayy.length];
+        for (int i = 0; i < ssplitArrayy.length; i++) {
+            cyphertextt[i] = Integer.parseInt(ssplitArrayy[i]);
+        }
+
+        int [] decoded = decrypt(kkey, cyphertextt);
         System.out.print("plaintext is : ");
 
         for (int i :decoded){

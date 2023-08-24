@@ -1,12 +1,20 @@
 package Lab_4;
+//Bh289
 
+import java.util.Scanner;
 
 public class rsa {
     public static void main(String[]args) {
-        int p=17,q=11,m=88;
+//        int p=17,q=11,m=88;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter Primes ");
+        int p = sc.nextInt();
+        int q = sc.nextInt();
+        System.out.println("Enter message ");
+        int m = sc.nextInt();
         int[][] keys= keygen(p,q);
-        printdoublearray(keys);
-        System.out.println(m);
+//        printdoublearray(keys);
+//        System.out.println(m);
         int c = encrypt(keys[0],m);
         System.out.println(c);
         System.out.println(decrypt(keys[1],c));
@@ -23,7 +31,7 @@ public class rsa {
         int res=1;
         while (b>0){
             if (b%2==1){
-                res=res*a;
+                res=res*a%p;
             }
             b/=2;
             a=a*a;
@@ -45,7 +53,6 @@ public class rsa {
                 break;
             }
         }
-        k[0][0]=7;
         int a = pn;
         int t = k[0][0];
         for (int X = 1; X < a; X++)

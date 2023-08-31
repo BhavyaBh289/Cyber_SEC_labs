@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8567ab73-a4ed-4c08-8428-62147c8ff1e7" name="Changes" comment="rsa algo donee">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_2/S_des.class" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_2/S_des.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_2/S_des.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_2/S_des.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_3/AES.class" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_3/AES.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_3/AES.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_3/AES.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_4/rsa.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_4/rsa.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

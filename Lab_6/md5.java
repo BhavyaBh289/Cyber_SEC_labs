@@ -1,5 +1,5 @@
 package Lab_6;
-
+//Bh289
 public class md5 {
     int A = 0X01234567,B=0X89abcdef,C=0xfedcba98,D=0X76543210;
     int[] m;
@@ -8,7 +8,7 @@ public class md5 {
         this.m= m;
     }
     public static void main(String[] args ){
-        int[] message = {0x10000020,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000
+        int[] message = {0x10060020,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000
                 ,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000};
         md5 t = new md5(message);
         for(int i =0;i<16;i++){
@@ -22,18 +22,28 @@ public class md5 {
                 t.r4();
             t.round(i);
         }
-        System.out.println(t.A+""+t.B+""+t.C+""+t.D);
+        System.out.println(t.A+" "+t.B+" "+t.C+" "+t.D);
 
     }
-    public void round(int n){
-        A=A^m[n];
-        A=A^k[n];
-        A=A<<2;
-        A=A^B;
-        int t =A;
-        A=D;D=C;C=B;B=t;
 
+
+    public void round(int n) {
+        int tempA = A;
+        A = D;
+        D = C;
+        C = B;
+        B = B + leftRotate((A + F(B, C, D) + m[n] + k[n]), 7);
+        A = tempA;
     }
+    private int leftRotate(int value, int shift) {
+        return (value << shift) | (value >>> (32 - shift));
+    }
+
+    // Placeholder functions F, G, H, and I for the logical functions
+    private int F(int x, int y, int z) {
+        return (x & y) | (~x & z);
+    }
+
     public void r1(){
         A = (B & C)|(~B & D)^ A;
     }public void r2(){
